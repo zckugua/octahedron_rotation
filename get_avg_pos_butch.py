@@ -11,7 +11,7 @@ import math
 def get_memory_usage():
     """Return current process RSS memory usage in MB."""
     process = psutil.Process(os.getpid())
-    return process.memory_info().rss / 1024 / 1024  # 转换为MB
+    return process.memory_info().rss / 1024 / 1024  
 
 comm = MPI.COMM_WORLD
 rank = comm.Get_rank()
